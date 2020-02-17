@@ -1,25 +1,38 @@
 {
-  "name": "mern-course",
+  "name": "MERN-study",
   "version": "1.0.0",
-  "description": "MERN stack",
+  "description": "Mern stack",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "server": "nodemon app.js"
+    "start": "app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavliukdmytro/MERN-study.git"
   },
   "keywords": [
-    "mearn",
+    "mern",
     "react"
   ],
-  "author": "Pvliuk Dmytro <pavliukmail@gmail.com>",
+  "author": "Pavliuk Dmytro smileua18@gmail.com",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavliukdmytro/MERN-study/issues"
+  },
+  "homepage": "https://github.com/pavliukdmytro/MERN-study#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "config": "^3.2.5",
     "express": "^4.17.1",
-    "mongoose": "^5.8.9"
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.1"
   },
   "devDependencies": {
-    "concurrently": "^5.0.2",
+    "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
   }
 }
