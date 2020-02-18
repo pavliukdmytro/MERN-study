@@ -1,5 +1,6 @@
 {
     "port": 5000,
     "jwtSecret": "zxdqjkl; ety[] sfgytioyt3245 k;'l 3245']pdfg,/",
-    "mongoUri": "mongodb://localhost:27017/MERN-study"
+    "mongoUri": "mongodb://localhost:27017/MERN-study",
+    "baseUrl": "http://localhost:5000"
 }
