@@ -18,7 +18,7 @@ export const AuthPage = () => {
     
     useEffect(() => {
         window.M.updateTextFields();
-    }, [])
+    }, []);
 
     const changeHandler = event => {
         setForm({
@@ -30,7 +30,7 @@ export const AuthPage = () => {
     const registerHandler = async () => {
         try{
             const data = await request('/api/auth/register',
-                'POST', {...form}, {'Content-Type': 'application/json'});
+                'POST', {...form});
             console.log('data', data);
         } catch (err) {}
     };
@@ -60,6 +60,7 @@ export const AuthPage = () => {
                                     type="text"
                                     name="email"
                                     className="yellow-input"
+                                    value={form.email}
                                     onChange={changeHandler}
                                 />
                                     <label htmlFor="email">Email</label>
@@ -71,6 +72,7 @@ export const AuthPage = () => {
                                     type="password"
                                     name="password"
                                     className="yellow-input"
+                                    value={form.password}
                                     onChange={changeHandler}
                                 />
                                 <label htmlFor="Password">Password</label>
