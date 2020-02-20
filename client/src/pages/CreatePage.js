@@ -7,14 +7,13 @@ export const CreatePage = () => {
     const [link, setLink] = useState('');
     const auth = useContext(AuthContext);
     const {request} = useHttp();
-    
+
     useEffect(() => {
         window.M.updateTextFields();
     }, []);
-    
+
     const history = useHistory();
-    
-    
+
     const pressHandler = async event => {
         if(event.key === 'Enter') {
             try {
@@ -25,7 +24,7 @@ export const CreatePage = () => {
             } catch (e) {}
         }
     };
-    
+
     return (
         <div className="row">
             <div className="col s8 offset-s2" style={{paddingTop: '2rem'}}>
